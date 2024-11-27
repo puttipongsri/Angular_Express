@@ -5,13 +5,14 @@ import { CommonModule } from '@angular/common';
 import { environment } from '../../environments/environment';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router'; // Import the Router class
+import { SnowflakesComponent } from '../snowflakes/snowflakes.component';
 
 @Component({
   selector: 'app-login',
   standalone: true,
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
-  imports: [FormsModule, CommonModule]
+  imports: [FormsModule, CommonModule , SnowflakesComponent]
 })
 export class LoginComponent {
   signupData = {

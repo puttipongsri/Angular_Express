@@ -1,9 +1,10 @@
 <body>
+  <app-snowflakes/>
     <div class="container">
       <input type="checkbox" id="check">
       <div class="login form">
         <header>Login</header>
-        <form action="#">
+        <form action="#" (ngSubmit)="onLogin()" #loginForm="ngForm" (keydown.enter)="onLogin()">
           <input type="text" placeholder="Enter your username" [(ngModel)]="loginData.username" name="username">
           <input type="password" placeholder="Enter a password" [(ngModel)]="loginData.password" name="password">
           <input type="button" class="button" value="Login" (click)="onLogin()">
@@ -20,7 +21,7 @@
           <input type="text" placeholder="Create your username" [(ngModel)]="signupData.username" name="username">
     <input type="password" placeholder="Create a password" [(ngModel)]="signupData.password" name="password">
     <input type="password" placeholder="Confirm your password" [(ngModel)]="signupData.confirmPassword" name="confirmPassword">
-    <input type="button" class="button" value="Signup" (click)="onSignup()">
+    <input type="submit" class="button" value="Signup" (click)="onSignup()">
         </form>
         <div class="signup">
           <span class="signup">Already have an account?
