@@ -6,9 +6,16 @@ export default class UserService {
         const [result] = await pool.query(sql);
         return result;
 }
-    async insertUser(user) {
-        let sql = 'INSERT INTO users SET ?';
-        const [result] = await pool.query(sql, user);
-        return result;
+async insertUser(username, hashedPassword) {
+    const sql = 'INSERT INTO users (username, password) VALUES (?, ?)';
+    const [result] = await pool.query(sql, [username, hashedPassword]);
+    return result;
+}
+    async getUserByUsername(username) {
+        let sql = `SELECT * FROM users WHERE username = '${username}'`;
+  
+        const [[user]] = await pool.query(sql);
+  
+        return user;
     }
 }

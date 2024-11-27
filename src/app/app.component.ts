@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { environment } from '../environments/environment.ts';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +10,3 @@ import { environment } from '../environments/environment.ts';
 export class AppComponent {
   title = 'test-angular';
 }
-console.log('API Base URL:', environment.apiBaseUrl);

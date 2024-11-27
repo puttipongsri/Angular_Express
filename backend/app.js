@@ -29,5 +29,5 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 app.use(cors({
-  origin: 'http://localhost:3000'
+  origin: 'http://localhost:4200'
 }));
