@@ -1,0 +1,20 @@
+.cart {
+    width: 300px;
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    background-color: #fff;
+    margin-left: 200px;
+    margin-top: 50px;
+    display: inline-block; /* Ensure carts are in the same row */
+  }
+  .cart img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+  }
+  h1 {
+    text-align: center;
+  }
