@@ -6,7 +6,9 @@ npm run local
 
 # Database
 userid int AUTO_INCREMENT PK
+
 username varchar
+
 password varchar
 
 # TestAngular
