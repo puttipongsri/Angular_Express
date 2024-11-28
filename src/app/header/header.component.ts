@@ -13,17 +13,16 @@ export class HeaderComponent {
   
   logout() {
     Swal.fire({
-      title: 'Are you sure?',
-      text: 'You will be logged out!',
+      title: 'ต้องการออกจากระบบใช่หรือไม่',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Yes, Logout!',
-      cancelButtonText: 'Cancel'
+      confirmButtonText: 'ออกจากระบบ',
+      cancelButtonText: 'ยกเลิก'
     }).then((result) => {
       if (result.isConfirmed) {
         localStorage.removeItem('token');
         this.router.navigate(['/']);
-        Swal.fire('Logged out!', 'You have been logged out.', 'success');
+        // Swal.fire('Logged out!', 'You have been logged out.', 'success');
       }
     });
   }
