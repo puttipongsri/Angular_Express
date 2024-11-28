@@ -1,5 +1,7 @@
 import UserService from "./user.service.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import config from "../config.js";
 
 export const getUsers = async (req, res) => {
     try {
@@ -81,15 +83,21 @@ export const login = async (req, res) => {
           cause: "",
           result: "",
         });
-      }
+      } else {
+        const token = jwt.sign(
+          { id: user.id, username: user.username },
+          config.app.jwtkey,
+          { expiresIn: "1h" }
+        );
   
-      return res.status(200).send({
-        status: "success",
-        code: 1,
-        message: "",
-        cause: "",
-        result: { id: user.id, username: user.username },
-      });
+        return res.status(200).send({
+          status: "success",
+          code: 1,
+          message: "",
+          cause: "",
+          result: { token: token },
+        });
+      }
     } catch (error) {
       console.error(error);
       return res.status(500).send({

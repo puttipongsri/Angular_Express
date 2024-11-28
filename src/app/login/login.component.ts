@@ -75,8 +75,9 @@ export class LoginComponent {
     };
 
     this.http.post(apiUrl, payload).subscribe(
-      (response) => {
+      (response: any) => {
         console.log('Login successful:', response);
+        localStorage.setItem('token', response.result.token);  
         this.router.navigate(['/home']);
       },
       (error) => {
