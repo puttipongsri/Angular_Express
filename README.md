@@ -4,6 +4,8 @@ cd backend
 
 npm run local
 
+Edit the .env.local file to use your database.
+
 # Database
 userid int AUTO_INCREMENT PK
 
