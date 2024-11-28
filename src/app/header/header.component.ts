@@ -22,7 +22,6 @@ export class HeaderComponent {
       if (result.isConfirmed) {
         localStorage.removeItem('token');
         this.router.navigate(['/']);
-        // Swal.fire('Logged out!', 'You have been logged out.', 'success');
       }
     });
   }
