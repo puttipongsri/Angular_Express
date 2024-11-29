@@ -3,11 +3,11 @@ import { HeaderComponent } from '../header/header.component';
 import { SnowflakesComponent } from '../snowflakes/snowflakes.component';
 
 @Component({
-  selector: 'app-about',
-  imports: [HeaderComponent,SnowflakesComponent],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+  selector: 'app-contact',
+  imports: [HeaderComponent, SnowflakesComponent],
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.scss'
 })
-export class AboutComponent {
+export class ContactComponent {
 
 }
