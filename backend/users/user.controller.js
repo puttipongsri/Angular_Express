@@ -40,7 +40,7 @@ export const insertUser = async (req, res) => {
         const password = req.body.password;
         const handpassword = await bcrypt.hash(password, 10);
         const result = await new UserService().insertUser(username,handpassword);
-        res.status(200).send({
+        res.status(201).send({
             status: "success",
             code: 1,
             message: "",
